@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap');
+
+:root {
+  color-scheme: light;
+  --page-bg: #d1d5db;
+  --page-bg-strong: #c4c9d2;
+  --page-ink: #0e1b2e;
+  --page-muted: #5d6b7d;
+  --focus-ring: rgba(41, 97, 255, 0.28);
+  --shadow-lg: 0 24px 70px rgba(16, 31, 54, 0.18);
+  --shadow-md: 0 14px 34px rgba(16, 31, 54, 0.12);
+  --font-body: var(--font-inter), Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: var(--font-playfair), 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  color: var(--page-ink);
+  background: var(--page-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+textarea,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  border: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.page-shell {
+  width: min(1360px, calc(100vw - 2rem));
+  margin: 0 auto;
+  padding: 2rem 0 3rem;
+}
+
+.page-heading {
+  max-width: 860px;
+  margin: 0 0 1.5rem;
+  animation: fadeInUp 500ms ease both;
+}
+
+.page-heading .eyebrow {
+  margin: 0 0 0.6rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #4a5568;
+}
+
+.page-heading h1 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3vw, 3.5rem);
+  line-height: 0.96;
+  letter-spacing: -0.03em;
+  color: var(--page-ink);
+}
+
+.page-heading p:last-child {
+  max-width: 58ch;
+  margin: 0.8rem 0 0;
+  color: var(--page-muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .page-shell {
+    width: min(100vw - 0.75rem, 1360px);
+    padding-top: 1rem;
+  }
+
+  .page-heading {
+    margin-bottom: 1rem;
+  }
+
+  .page-heading h1 {
+    font-size: clamp(1.6rem, 8vw, 2.4rem);
+  }
+
+  .page-heading p:last-child {
+    font-size: 0.88rem;
+  }
+}
