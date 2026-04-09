@@ -1,41 +1,46 @@
 # Interactive Wall Calendar
 
-A beautiful, interactive wall calendar built with Next.js — featuring date range selection, per-day memos & tasks, and a physical paper calendar aesthetic with light/dark modes.
+An interactive wall calendar built with Next.js. Supports date range selection, per-day memos and tasks, and includes both light and dark modes. All data is persisted in the browser's localStorage.
 
 ## Features
 
--  Monthly calendar grid with navigation
--  Single-day selection & Shift+click range selection
--  Memos saved per day, month, or range (stored in browser localStorage)
--  Per-day task lists with completion tracking
--  Light & Dark mode toggle
--  Unique color theme per month
--  Fully responsive (desktop + mobile)
+- Monthly calendar grid with month-to-month navigation
+- Single-day selection and Shift+click range selection
+- Memos saved per day, month, or date range
+- Per-day task lists with completion tracking
+- Light and dark mode
+- Unique color theme for each month
+- Responsive layout for desktop and mobile
 
-## Getting Started
+## Run Locally
 
-### Prerequisites
-
-- [Node.js](https://nodejs.org/) (v18 or later)
-
-### Install & Run
+Requires [Node.js](https://nodejs.org/) v18+.
 
 ```bash
-# Clone the repo
 git clone https://github.com/Omesh2004/TakeU-forward.git
 cd TakeU-forward
-
-# Install dependencies
 npm install
-
-# Start the dev server
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Opens at [http://localhost:3000](http://localhost:3000).
+
+## Deploy on Vercel
+
+1. Push this repo to GitHub.
+2. Go to [vercel.com](https://vercel.com) and import the repository.
+3. Vercel auto-detects Next.js — no extra configuration needed.
+4. Click **Deploy**.
+
+Or deploy from the CLI:
+
+```bash
+npm i -g vercel
+vercel
+```
 
 ## Tech Stack
 
-- **Next.js** — React framework
-- **CSS Modules** — Scoped styling
-- **localStorage** — Client-side data persistence
+- Next.js
+- CSS Modules
+- localStorage for client-side persistence
